@@ -1,0 +1,230 @@
+/* Estrutura do Site*/
+
+/*lembrando que margin é a distância para outros blocos
+e padding é a distância da borda ao conteúdo*/
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	background: #fff url(../imagens/fundo2.jpg);
+}
+
+#principal {
+	width: 750px;
+	margin: 0 auto;
+	/*border:  1px solid red; */
+	color: white;
+}
+
+#topo {
+	height: 150px;
+	background: url(../imagens/logo2.jpg) no-repeat right top;
+	padding-top: 25px;
+
+}
+
+.logo {
+	width: 652px;
+	height: 66px;
+}
+
+/*Barra de Navegação*/
+
+/*primeiro zerar todas uls*/
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/*formatação da UL do Topo*/
+
+#topo ul {
+	margin-top: 95px;
+	background: #00008b;
+	float: left;
+}
+
+#topo ul li {
+	float: left;
+}
+
+#topo ul a {
+	font-size: 0.9em;
+	display: block;
+	padding: 0.5em 2.43em;
+	line-height: 2.1em;
+	text-decoration: none;
+	color: #fff;
+	background: ;
+}
+
+#topo ul a:hover {
+	color: #0000ff;
+}
+
+/*formatação de cada link,marcação de cada página
+quando a classe tem o mesmo nome do id do link, a cor muda */
+body.home #navegacao a#home,
+body.disciplinas #navegacao a#disciplinas,
+body.discussoes #navegacao a#discussoes,
+body.dicas #navegacao a#dicas,
+body.professores #navegacao a#professores,
+body.provas #navegacao a#provas,
+body.entrar #navegacao a#entrar
+{
+	color: #fff;
+	background: #0000ff;
+	cursor: !important;
+}
+
+/* Configuração layout de três colunas */
+
+#conteudo {
+	margin-top: 90px;
+	background: blueviolet;
+
+}
+
+/*cuidar a largura do principal -> 750px 
+espaçamento de 15, lateral com 180 e 270 para o primário e secundario
+Algumas páginas terão diferentes configurações de conteúdos, dependendo do id do body*/
+
+#lateral {
+	width: 180px;
+	float: left;
+	margin: 0 0 20px -750px;
+}
+
+
+/*padrão com três colunas, se quiser usar duas ou uma coluna, mudar o id do body*/
+#primario {
+	width: 270px;
+	float: left;
+	margin: 0 0 20px 195px; /*180 do seu tamanho e 15 do espaçamento*/
+}
+
+#duas-colunas #primario {
+	width: 555px;
+}
+
+#uma-coluna #primario {
+	width: 750px;
+	margin: 0 0 20px 0px;
+}
+
+#secundario {
+	width: 270px;
+	float: left;
+	margin: 0 0 20px 15px;
+}
+
+.caixa {
+	background: #f3f3f3 /*url(../imagens/fundo-caixa.png)*/;
+	color: black;
+	margin: 10px 0 10px 0;
+	padding: 5px;
+}
+
+h2 {
+	font-size: 1.1em;
+	background: #00008b;
+	color: #fff;
+	padding: 5px;
+}
+
+.caixa-conteudo {
+	background: #fff;
+	padding: 5px;
+	margin-top: 5px;
+}
+
+#lateral ul a {
+	font-size: 0.9em;
+	padding: 3px;
+	display: block;
+	line-height: 30px;
+	color: #000;
+	text-decoration: none;
+	border-bottom: 1px solid #f3f3f3;
+}
+
+#lateral ul a:hover {
+	color: #a1a1a1;
+	background: #f9f9f9 url(../imagens/marcador.png) no-repeat left center;
+	padding-left: 20px;
+}
+
+label {
+	display: block;
+	cursor: pointer;
+	width: 155px;
+}
+
+input {
+	background: white;
+	font-size: 0.9em;
+	padding: 2px;
+	margin: 2px;
+	width: 145px;
+}
+
+input.submit {
+	width: 80px;
+	color: #fff;
+	background-color: #0000ff;
+	border-bottom: 2px slid #870529;
+}
+
+/*Formatação das imagens, seletor para os padroes e classe para diferenciar formatações*/
+
+img {
+	border: 2px solid #dfdfdf;
+}
+
+img.imagem-principal {
+	border: 4px solid #dfdfdf;
+}
+
+/*Cabeçalhos*/
+h3 {
+	text-transform: uppercase;
+	display: inline;
+	font-size: 0.9em;
+	padding: 3px;
+	margin-left: 0;
+}
+
+#lista-videos a {
+	text-decoration: none;
+}
+
+#lista-videos li {
+padding-top: 15px;
+}
+
+#lista-videos li:hover {
+	background: #eee;
+	cursor: pointer;
+}
+
+/*Formatação do Rodape -> está fora do principal*/
+
+#container-rodape {
+	background: #000000;
+	padding: 20px;
+}
+
+#rodape {
+	width: 100%;
+	margin: 0 auto;
+	color: #fff;
+	text-align: center;
+	position: relative;
+	bottom: 0;
+}
